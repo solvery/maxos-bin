@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#log_dir=/workspace/log/$(pwd | sed 's/\//_/g')
+log_file=log.$(date +%F.%H.%M.%S)
+log_path=./$log_file
+#mkdir -p $log_dir
+
+time make $@ 2>&1 | tee -a $log_path
+
+#echo $@
+#echo $?
+echo $log_path

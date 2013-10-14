@@ -1,0 +1,31 @@
+bootargs=noinitrd console=ttyS1,115200n8 ${mtdparts} root=/dev/mtdblock3 rw rootfstype=jffs2
+baudrate=115200
+bootfile="vmlinux.bin"
+loadaddr=0x00008000
+norparts=mtdparts=nx_2016:1024k@0k(uldr),512k@1024k(u-boot),5m@1536k(kernel),32m@7m(root),32m@39m(appfs),-(extra)
+norids=nor0=nx_2016
+nandparts=mtdparts=nx_2017:1024k@0k(uldr),512k@1024k(u-boot),5m@1536k(kernel),32m@7m(root),32m@39m(appfs),-(extra)
+nandids=nand0=nx_2017
+sfcparts=mtdparts=nx_sfc:1024k@0k(uldr),512k@1024k(u-boot),5m@1536k(kernel),8m@7m(root),-(extra)
+sfcids=sfc0=nx_sfc
+Image=tftp 0x00008000 Image; go 0x00008000
+autoload=n
+uboot=tftp 0x00008000 u-boot.bin; go 0x00008000
+norboot=nor read 0x180000 0x500000; go 0x8000
+nandboot=nand read 0x180000 0x500000; go 0x8000
+sfcboot=sfc read 0x180000 0x500000; go 0x8000
+mtdparts=mtdparts=nx_2017:1024k@0k(uldr),512k@1024k(u-boot),5m@1536k(kernel),32m@7m(root),32m@39m(appfs),-(extra)
+mtdids=nand0=nx_2017
+bootcmd=run nandboot
+dieid#=00000000
+ethact=lip0
+ethaddr=00:25:6f:33:32:05
+filesize=80000
+fileaddr=8000
+netmask=255.255.255.0
+ipaddr=172.16.55.88
+serverip=172.16.55.90
+stdin=serial
+stdout=serial
+stderr=serial
+bootdelay=10
