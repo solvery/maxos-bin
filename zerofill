@@ -1,0 +1,3 @@
+
+cat /dev/zero > zero.fill; sync; rm -f zero.fill; sync
+
