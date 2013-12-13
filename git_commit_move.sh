@@ -1,6 +1,6 @@
 
-file_src=/workspace/1/blvds_link/fpga/3
-file_dst=/workspace/1/blvds_link/fpga/SmartSOPC_standard_3C25.blvds
+file_src=$1
+file_dst=$2
 
 #mkdir -p $file_dst
 cd $file_src

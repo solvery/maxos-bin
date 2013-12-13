@@ -1,47 +1,49 @@
-$fsdbDumpvars check=novas_check_fsdbDumpvars call=novas_call_fsdbDumpvars misc=novas_misc data=1 persistent acc+=cbka:* 
-$fsdbDumpvarsES check=novas_check_fsdbDumpvarsES call=novas_call_fsdbDumpvarsES misc=novas_misc data=2 persistent acc+=cbka:* 
-$fsdbDumpMDA check=novas_check_fsdbDumpMDA call=novas_call_fsdbDumpMDA misc=novas_misc data=3 persistent acc+=cbka:*
-$fsdbDumpSVA check=novas_check_fsdbDumpSVA call=novas_call_fsdbDumpSVA misc=novas_misc data=4 persistent acc+=cbka:*
-$fsdbDumpvarsByFile check=novas_check_fsdbDumpvarsByFile call=novas_call_fsdbDumpvarsByFile misc=novas_misc data=5 persistent acc+=cbka:*
-$fsdbSuppress check=novas_check_fsdbSuppress call=novas_call_fsdbSuppress data=6 persistent acc+=cbka:*
-$fsdbDumpon check=novas_check_fsdbDumpon call=novas_call_fsdbDumpon data=7 persistent 
-$fsdbDumpoff check=novas_check_fsdbDumpoff call=novas_call_fsdbDumpoff data=8 persistent 
-$fsdbSwitchDumpfile check=novas_check_fsdbSwitchDumpfile call=novas_call_fsdbSwitchDumpfile data=9 persistent
-$fsdbDumpfile check=novas_check_fsdbDumpfile call=novas_call_fsdbDumpfile misc=novas_misc data=10 persistent 
-$fsdbAutoSwitchDumpfile check=novas_check_fsdbAutoSwitchDumpfile call=novas_call_fsdbAutoSwitchDumpfile misc=novas_misc data=11 persistent 
-$fsdbDumpFinish check=novas_check_fsdbDumpFinish call=novas_call_fsdbDumpFinish data=12 persistent 
-$fsdbDumpflush check=novas_check_fsdbDumpflush call=novas_call_fsdbDumpflush data=13 persistent 
-$fsdbLog check=novas_check_fsdbLog call=novas_call_fsdbLog data=14 persistent 
-$fsdbAddRuntimeSignal check=novas_check_fsdbAddRuntimeSignal call=novas_call_fsdbAddRuntimeSignal misc=novas_misc data=14 persistent
-$fsdbDumpSC check=novas_check_fsdbDumpSC call=novas_call_fsdbDumpSC misc=novas_misc data=15 persistent acc+=cbka:* 
-$fsdbDumpvarsToFile check=novas_check_fsdbDumpvarsToFile call=novas_call_fsdbDumpvarsToFile misc=novas_misc data=16 persistent acc+=cbka:*
-$sps_create_transaction_stream check=novas_check_sps_create_transaction_stream size=32 call=novas_call_sps_create_transaction_stream data=17 persistent 
-$sps_begin_transaction check=novas_check_sps_begin_transaction size=32 call=novas_call_sps_begin_transaction data=18 persistent 
-$sps_end_transaction check=novas_check_sps_end_transaction call=novas_call_sps_end_transaction data=19 persistent 
-$sps_free_transaction check=novas_check_sps_free_transaction call=novas_call_sps_free_transaction data=20 persistent 
-$sps_add_attribute check=novas_check_sps_add_attribute call=novas_call_sps_add_attribute data=21 persistent 
-$sps_add_relation check=novas_check_sps_add_relation call=novas_call_sps_add_relation data=22 persistent 
-$fsdbWhatif call=novas_call_fsdbWhatif size=32
-$fsdbDumpClassMethod check=novas_check_fsdbDumpClassMethod call=novas_call_fsdbDumpClassMethod misc=novas_misc data=23 persistent acc+=cbka:*
-$fsdbSuppressClassMethod check=novas_check_fsdbSuppressClassMethod call=novas_call_fsdbSuppressClassMethod misc=novas_misc data=24 persistent acc+=cbka:*
-$fsdbSuppressClassProp check=novas_check_fsdbSuppressClassProp call=novas_call_fsdbSuppressClassProp misc=novas_misc data=25 persistent acc+=cbka:*
-
-$fsdbDisplay check=novas_check_fsdbDisplay call=novas_call_fsdbDisplay persistent 
-$fsdbDumplimit check=novas_check_fsdbDumplimit call=novas_call_fsdbDumplimit persistent
-$fsdbDumpMem check=novas_check_fsdbDumpMem call=novas_call_fsdbDumpMem persistent
-$fsdbDumpMemNow check=novas_check_fsdbDumpMemNow call=novas_call_fsdbDumpMemNow persistent
-$fsdbDumpMemInScope check=novas_check_fsdbDumpMemInScope call=novas_call_fsdbDumpMemInScope persistent
-$fsdbDumpMDANow check=novas_check_fsdbDumpMDANow call=novas_call_fsdbDumpMDANow persistent
-$fsdbDumpMDAOnChange check=novas_check_fsdbDumpMDAOnChange call=novas_call_fsdbDumpMDAOnChange persistent
-$fsdbDumpMDAInScope check=novas_check_fsdbDumpMDAInScope call=novas_call_fsdbDumpMDAInScope persistent
-$fsdbDumpMemInFile check=novas_check_fsdbDumpMemInFile call=novas_call_fsdbDumpMemInFile persistent
-$fsdbDumpPSL check=novas_check_fsdbDumpPSL call=novas_call_fsdbDumpPSL persistent
-$fsdbDumpPSLon check=novas_check_fsdbDumpPSLon call=novas_call_fsdbDumpPSLon persistent
-$fsdbDumpPSLoff check=novas_check_fsdbDumpPSLoff call=novas_call_fsdbDumpPSLoff persistent
-$fsdbDumpSVAon check=novas_check_fsdbDumpSVAon call=novas_call_fsdbDumpSVAon persistent
-$fsdbDumpSVAoff check=novas_check_fsdbDumpSVAoff call=novas_call_fsdbDumpSVAoff persistent
-$fsdbDumpStrength check=novas_check_fsdbDumpStrength call=novas_call_fsdbDumpStrength persistent
-$fsdbDumpSingle check=novas_check_fsdbDumpSingle call=novas_call_fsdbDumpSingle persistent
-$fsdbDumpIO check=novas_check_fsdbDumpIO call=novas_call_fsdbDumpIO persistent
-$fsdbDumpPattern check=novas_check_fsdbDumpPattern call=novas_call_fsdbDumpPattern persistent
-$fsdbSubstituteHier check=novas_check_fsdbSubstituteHier call=novas_call_fsdbSubstituteHier persistent
+$fsdbVersion check=plicompileNoArgs call=plitaskVersion
+$fsdbSubstituteHier check=plicompileSubstituteHier call=plitaskSubstituteHier
+$fsdbDumpfile check=plicompileDumpfile call=plitaskDumpfile 
+$fsdbDumpvars check=plicompileDumpvars call=plitaskDumpvars misc=plimiscFSDB acc=read,callback_all:*
+$fsdbDumpSC   check=plicompileDumpSC   call=plitaskDumpSC   misc=plimiscFSDB acc=read,callback_all:*
+$fsdbDumpPattern check=plicompileDumpPattern call=plitaskDumpPattern misc=plimiscFSDB acc=read,callback_all:*
+$fsdbDumpvarsES  check=plicompileDumpvarsES call=plitaskDumpvarsES misc=plimiscFSDB acc=read,callback_all:*
+$fsdbDumpvarsToFile check=plicompileDumpvarsToFile call=plitaskDumpvarsToFile  misc=plimiscFSDB acc=read,callback_all:*
+$fsdbSwitchDumpfile check=plicompileSwitchFile call=plitaskSwitchFile 
+$fsdbAutoSwitchDumpfile check=plicompileAutoSwitchFile call=plitaskAutoSwitchFile 
+$fsdbDumpon check=plicompileNoArgs call=plitaskDumpon misc=plimiscDumpon 
+$fsdbDumpoff check=plicompileNoArgs call=plitaskDumpoff 
+$fsdbDumpflush check=plicompileNoArgs call=plitaskDumpflush
+$fsdbDumplimit check=plicompileDumplimit call=plitaskDumplimit
+$fsdbDumpStrength check=plicompileDumpStrength call=plitaskDumpStrength
+$fsdbDumpMem check=plicompileDumpMem call=plitaskDumpMem misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMemNow check=plicompileDumpMem call=plitaskDumpMemNow misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMemInFile check=plicompileDumpMemInFile call=plitaskDumpMemInFile misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMemInScope check=plicompileDumpMemInScope call=plitaskDumpMemInScope misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMDA check=plicompileDumpMDA call=plitaskDumpMDA misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMDANow check=plicompileDumpMDA call=plitaskDumpMDANow misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpMDAInScope check=plicompileDumpMDAInScope call=plitaskDumpMDAInScope misc=plimiscDumpMem acc=read,callback_all:*
+$fsdbDumpFinish check=plicompileNoArgs call=plitaskDumpFinish
+$fsdbInteractive check=plicompileNoArgs call=plitaskInteractive misc=plimiscInteractive 
+$fsdbDisplay check=plicompileDisplay call=plitaskDisplay misc=plimiscFSDB acc=read,callback_all:*
+$fsdbSuppress check=plicompileSuppress call=plitaskSuppress
+$fsdbTest call=plitaskTest
+$fsdbDebug check=plicompileDebug call=plitaskDebug
+$debussy check=plicompileDebussy call=plitaskDebussyVCS 
+$vericom check=plicompileVericom call=plitaskVericom
+$db_breakatline check=plicompileLineBreak call=plitaskLineBreak
+$db_breakonceatline check=plicompileLineBreak call=plitaskOnceLineBreak
+$db_deletelinebreak check=plicompileDeleteLineBreak call=plitaskDeleteLineBreak
+$db_showlinebreak check=plicompileNoArgs call=plitaskShowLineBreak
+$db_setfocus check=plicompileSetFocus call=plitaskSetFocus
+$db_deletefocus check=plicompileDeleteFocus call=plitaskDeleteFocus
+$db_enablefocus check=plicompileEnableFocus call=plitaskEnableFocus
+$db_disablefocus check=plicompileDisableFocus call=plitaskDisableFocus
+$db_stopatfocus check=plicompileNoArgs call=plitaskStopAtFocus
+$fsdbDumpOVA check=plicompileDumpOVA call=plitaskDumpOVA misc=plimiscFSDB acc=read:*
+$fsdbDumpOVAon call=plitaskDumpOVAon
+$fsdbDumpOVAoff call=plitaskDumpOVAoff
+$fsdbDumpSVA check=plicompileDumpSVA call=plitaskDumpSVA misc=plimiscFSDB acc=read:*
+$fsdbDumpSVAon call=plitaskDumpSVAon
+$fsdbDumpSVAoff call=plitaskDumpSVAoff
+$fsdbDumpPSL check=plicompileDumpPSL call=plitaskDumpPSL misc=plimiscFSDB acc=read:*
+$fsdbRecSVAasTrans check=plicompileRecSVAasTrans call=plitaskRecSVAasTrans misc=plimiscFSDB acc=read:*
+$fsdbDumpPSLon call=plitaskDumpPSLon
+$fsdbDumpPSLoff call=plitaskDumpPSLoff
