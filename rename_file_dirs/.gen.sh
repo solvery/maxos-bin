@@ -1,6 +1,7 @@
 #! /bin/sh
 
-name_new=$1
+name_old=$1
+name_new=$2
 if [ $name_new ]; then
 	echo $name_new
 else
@@ -8,16 +9,8 @@ else
 	exit 0
 fi
 
-git co -f -b $1
-sh .rename_content.sh  $1
-git ci -a -m "auto, rename_content."
+sh .rename_content.sh $name_old $name_new
 
-python .rename_file_dir.py  $1
-git add .
-git ci -a -m "auto, rename filename."
+python .rename_file_dir.py  $name_old $name_new
 
-#rm .gen.sh .rename_content.sh .rename_file_dir.py
-#git ci -a -m "auto, remove generate script."
 
-ls .rename_content.sh .rename_file_dir.py .gen.sh | xargs sed -i "s/pcard_adc_ctrl/$1/g"
-git ci -a -m "auto, generate script can sub generate."

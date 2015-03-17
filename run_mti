@@ -1,1 +1,1 @@
-vsim -c -do simulate_mti.do | tee log
+vsim -c -do run.do | tee log

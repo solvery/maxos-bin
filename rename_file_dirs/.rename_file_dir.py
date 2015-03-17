@@ -4,14 +4,16 @@ import os.path
 import re
 import sys
 
-name_old = "pcard_adc_ctrl"
-name_new = sys.argv[1]
+name_old = sys.argv[1]
+name_new = sys.argv[2]
 
 def modify( path ):
 	os.chdir( path )
 	for dir_or_file in os.listdir( path ):
 		if (re.match(r".git", dir_or_file)):
 			print "skip .git"
+		elif (os.path.islink(dir_or_file)):
+			print "skip link"
 		else:
 			if os.path.isdir( dir_or_file ):
 				modify( os.getcwd() + '/' + dir_or_file )

@@ -1,3 +1,3 @@
 
-grep -r -l pcard_adc_ctrl * | xargs sed -i "s/pcard_adc_ctrl/$1/g"
+grep -r -l $1 * | xargs sed -i "s/$1/$2/g"
 

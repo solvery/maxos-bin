@@ -2,6 +2,7 @@
 //Dump Wave
 //---------------------------------------------
 module dump_wave();
+`define fsdb
 
 `ifdef vcd
 initial begin
@@ -13,7 +14,7 @@ end
 `ifdef fsdb
 initial begin
     $fsdbDumpfile("tb.fsdb");
-    $fsdbDumpvars(0);
+    $fsdbDumpvars(8);
     $fsdbDumpon;
 end
 `endif
