@@ -1,0 +1,41 @@
+[user]
+	name = solvery@163.com
+	email = solvery@163.com
+[core]
+	excludesfile = /root/.gitignore
+	editor = vim
+	autocrlf = false
+[alias] 
+	st = status 
+	s  = status -uno
+	d  = diff
+	co = checkout 
+	ci = commit 
+	br = branch 
+	ls = ls-files
+	svnup = svn rebase
+	svnci = svn dcommit
+	lo = log --date=iso --name-status
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[receive]
+	denyCurrentBranch = ignore
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+    ui = true
+    pager = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan

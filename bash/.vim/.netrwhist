@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/prj/card_p_45/fpga/sp45t.pcard.lvds_test/edk/pcores/blvds_slave_top_v1_00_a'
+let g:netrw_dirhist_2='/trash/tmp/diveintopython_code'
+let g:netrw_dirhist_3='/trash/tmp'
+let g:netrw_dirhist_4='/trash/tmp/python/Demo/threads'
