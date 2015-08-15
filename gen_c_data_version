@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "#define VER_YMDHM	" $(date +%Y%m%d%H%M)
+echo "#define VER_MDHM	" $(date +%m%d%H%M)
+echo "#define VER_MDH	" $(date +%m%d%H)
+echo "#define VER_MD	" $(date +%m%d)
+

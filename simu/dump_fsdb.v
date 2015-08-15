@@ -14,7 +14,7 @@ end
 `ifdef fsdb
 initial begin
     $fsdbDumpfile("tb.fsdb");
-    $fsdbDumpvars(8);
+    $fsdbDumpvars(6);
     $fsdbDumpon;
 end
 `endif

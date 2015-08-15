@@ -1,0 +1,7 @@
+#!/bin/sh
+
+find */* | grep -v "\.git" | grep "\.mpd$"
+find */* | grep -v "\.git" | grep "\.pao$"
+find */* | grep -v "\.git" | grep "\.bbd$"
+find */hdl/verilog/ | grep -v "\.git" | grep "\.v$"
+

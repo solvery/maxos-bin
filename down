@@ -1,0 +1,6 @@
+#!/bin/sh
+
+file_bit=/workspace/d/work/pa5000/download_45t/system_top.bit
+rm $file_bit
+cp system_top.bit $file_bit
+

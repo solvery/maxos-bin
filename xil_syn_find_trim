@@ -1,0 +1,4 @@
+#!/bin/sh
+
+grep -rl --include=*.srp trimmed .
+
