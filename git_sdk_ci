@@ -1,4 +1,0 @@
-git add -f .
-git ci -a -m "sdk."
-git gc --aggr
-

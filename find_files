@@ -1,4 +1,4 @@
 #!/bin/sh
 
-find -L $@ -type f | grep -v .git | sort > files
+find -L . $@ -type f | grep -v .git | sort > files
 

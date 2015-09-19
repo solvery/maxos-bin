@@ -1,4 +1,4 @@
 #!/bin/sh
 
-find -name .git | sed -e 's/\.git//g' | grep -vi sdk > git.list
+find . -name .git | sed -e 's/\.git//g' | grep -vi sdk > git.list
 

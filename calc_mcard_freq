@@ -1,8 +1,0 @@
-#!/usr/bin/python
-#coding=utf-8
-
-import sys
-
-a = int(sys.argv[1]);
-b = float(sys.argv[2]);
-print 100000000.0*a/b

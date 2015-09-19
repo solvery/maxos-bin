@@ -1,7 +1,8 @@
 #!/bin/sh
 
 date=$(date +%F%N)
-mkdir -p /trash/$date
-mv $@ /trash/$date
-echo /trash/$date
+trash_dir=~/.Trash/$date
+mkdir -p $trash_dir
+mv $@ $trash_dir
+echo $trash_dir
 
