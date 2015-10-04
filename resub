@@ -1,0 +1,12 @@
+#!/bin/sh
+
+dir=~/workspace/bin/rename_file_dirs
+
+rm -f .gen.sh .rename_content.sh .rename_file_dir.py
+ln -s $dir/.gen.sh             
+ln -s $dir/.rename_content.sh  
+ln -s $dir/.rename_file_dir.py
+
+sh .gen.sh $1 $2
+
+rm -f .gen.sh .rename_content.sh .rename_file_dir.py
