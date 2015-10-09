@@ -1,6 +1,6 @@
 #!/bin/sh
 
-date=$(date +%F%N)
+date=$(date +%F_%H-%M-%S)
 trash_dir=~/.Trash/$date
 mkdir -p $trash_dir
 mv $@ $trash_dir
